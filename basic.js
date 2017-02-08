@@ -2,5 +2,5 @@
 
  obj.foo = 123; // set
 
- obj.foo; //get
+ console.log(obj.foo); //get
 
