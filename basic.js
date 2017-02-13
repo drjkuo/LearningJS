@@ -35,3 +35,13 @@ function foo() {
     }
 }
 
+var result = [];
+for (var i=0; i < 5; i++) {
+    result.push(function () { return i });  // (*)
+}
+console.log(result[1]()); // 5 (不是 1)
+console.log(result[3]()); // 5 (不是 3)
+
+console.log(result[1]); // function () { return i }
+console.log(result[3]); // function () { return i }
+
